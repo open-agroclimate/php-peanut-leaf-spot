@@ -1,0 +1,70 @@
+body{
+	font-size:14px;
+}
+
+#your_risk{
+	float:left;
+	list-style: none; !important;
+	-moz-border-radius-bottomleft: 6px;
+    	-moz-border-radius-bottomright: 6px;
+   	 -moz-border-radius-topleft: 6px;
+   	 -moz-border-radius-topright: 6px;
+    	background-color: #ECEBEB;
+    	border-bottom-color: #CCCCCC;
+    	border-bottom-style: solid;
+    	border-bottom-width: 1px;
+    	border-left-color: #CCCCCC;
+    	border-left-style: solid;
+   	border-left-width: 1px;
+   	border-right-color: #CCCCCC;
+   	border-right-style: solid;
+    	border-right-width: 1px;
+    	border-top-color: #CCCCCC;
+    	border-top-style: solid;
+    	border-top-width: 1px;
+    	color: #0B86A1;
+    	font-size: 14px;
+    	padding-bottom: 0;
+    	padding-left: 7px;
+    	padding-right: 7px;
+    	padding-top: 0;
+	margin-left:10px;
+	cursor:pointer;
+
+}
+
+#your_risk:hover {
+    background-color:#ADDDA4;
+    color:#FFFFFF;
+}
+
+#cal_risk td{
+	width:auto;
+	padding:5px;
+	text-align:left;
+	border:1px dotted;
+}
+
+#title{
+	margin-left:80px;
+	color:#666666;
+	font-size:1em;
+	font-family: Trebuchet MS,Arial,Helvetica,sans-serif;
+}
+
+#text{
+	font-size:12px;
+	width:700px;
+	padding:10px;
+}
+
+#conds{
+	border:1px solid;
+}
+
+#conds th,td{
+	width:120px;
+	border:1px solid grey;
+	text-align:center;
+	padding:2px;
+}

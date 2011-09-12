@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Peanut Leaf-Spot Risk Tool</title>
+<style>
+body{
+padding:0px 30px 0px 30px;
+font-size:18px;
+}
+body sup{
+font-size:13px;
+}
+#ref{
+font-size:14px;
+}
+#risks td{
+padding:5px;
+width:200px;
+}
+
+#spray td{
+padding:5px;
+width:150px;
+}
+
+</style>
+</head>
+<body>
+<h2><i>How the Agroclimate.org Peanut Leaf Spot Advisory Tool works</i></h3>
+<h4>Georgia, Florida, and Alabama</h4>
+
+The leaf spot advisory for Georgia, Florida, and Alabama uses the algorithm developed
+at Auburn University in the late 1980s and early 1990s known as AU-Pnuts<sup>1</sup>. It relies on
+recent precipitation events and forecasts for future rainfall for the selected weather
+station, and calculates a relative risk of <i>low, medium, or high</i>. A graph is displayed
+showing the risk levels over the previous 10 days.<br><br>
+Specifically, risks are determined according to the criteria in the following table:<br>
+<table id="risks" border="1">
+<th>Average probability of precipitation over next 5 days</th><th>Number of days w/ rain in last 10 days</th><th>Risk</th>
+<tr><td>&#8805; 50%</td><td> N/A</td><td> Hi</td></tr>
+<tr><td>40% - 49%</td><td>&#8805; 1</td><td> Hi</td></tr>
+<tr><td>40% - 49%</td><td> 0</td><td> Med</td></tr>
+<tr><td>20% - 39%</td><td>&#8805; 2</td><td> Hi</td></tr>
+<tr><td>20% - 39%</td><td> < 2</td><td> Med</td></tr>
+<tr><td>< 20%</td><td>&#8805; 3</td><td> Hi</td></tr>
+<tr><td>< 20%</td><td> < 3</td><td> Low</td></tr>
+</table><br>
+The data for the number of rain events comes from the selected weather station. The
+precipitation forecast comes from the nearest National Weather Service station at
+which a forecast is generated (this location is indicated under the graph). We download
+the Global Forecast System Model Output Statistics Extended forecast (GFS-MOS
+(MEX))<sup>2</sup> from this station daily, and calculate the average of the 24-hour precipitation
+probabilities for the next five days.<br><br>
+An individual grower's risk, however, depends on when fungicide was last applied, if and
+when irrigation occurred, and if the rainfall at his particular location differed from that
+at the weather station selected. Therefore the user has an opportunity to enter the
+number of times irrigation took place, the number of times it rained on his peanut field,
+and the number of days since the last spray was applied. (If rain events are not known,
+data from the weather station can be used, but this should be done with caution given
+the wide variability in rainfall during the summer from place to place.)<br><br>
+With the new information, the tool than re-calculates risk from the table above,
+counting each irrigation as a rain event, and only counting rain/irrigation events on days
+when peanuts were not protected by fungicide. "Not protected" is considered to be
+more than ten days after the last spray was applied. For example, say a grower
+accessed the tool on August 17. He indicates that he had last sprayed fungicide on
+August 1, irrigated on August 12, and that it had rained on August 4, 8, and 16. In this
+case only two rain days (Aug 12 and Aug 16) would be counted.<br><br>
+The current risk is then displayed, along with a spray recommendation. The
+recommendation to spray is based on the following table:
+<table id="spray" border="1">
+<th>Risk</th><th>Days since last spray</th><th>Spray?</th>
+<tr><td>Hi</td><td> N/A </td><td>Yes</td></tr>
+<tr><td>Medium</td><td> > 14</td><td> Yes</td></tr>
+<tr><td>Medium</td><td>&#8804; 14 </td><td>No</td></tr>
+<tr><td>Low</td><td> N/A</td><td> No</td></tr>
+</table><br>
+<hr>
+<div id="ref">
+<sup>1</sup> Jacobi, J.C., P.A. Backman, D.P. Davis, and P.M. Brannen. 1995. AU-Pnuts Advisory I: Development of
+a rule-based system for scheduling peanut leaf spot fungicide applications. Plant. Dis. 79:666-671.<br>
+<sup>2</sup> See <a href="http://www.weather.gov/mdl/synop/gfs.php">http://www.weather.gov/mdl/synop/gfs.php</a>
+<br><br>
+</div>
+</body>
+</html>
